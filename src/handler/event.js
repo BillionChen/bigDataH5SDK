@@ -74,7 +74,7 @@ export const clickEvent = function (e) {
     // console.log('触发了点击', tg);
     user.updateLastVisitTime();
     if (tg) {
-        let actionName = tg.getAttribute("JRDSJ_text") || tg.textContent.match(/[\u4e00-\u9fa5]/g).join("") || null;
+        let actionName = tg.getAttribute("DSJ_text") || tg.textContent.match(/[\u4e00-\u9fa5]/g).join("") || null;
         let data = setUpData({
             [columns.eventName]: 'e_e', // 这里配置事件名称
             [columns.eventDate]: new Date().getTime(),// 事件发生时的时间
@@ -87,9 +87,9 @@ export const clickEvent = function (e) {
 
 const getClickTarget = function (node, lv) {
     // 默认button标签、a标签、有点击类的标签需要采集并发送数据
-    // if (tg.nodeName === 'BUTTON' || tg.nodeName === 'A' || tg.classList.contains('MD_JRDSJ__click')) {
+    // if (tg.nodeName === 'BUTTON' || tg.nodeName === 'A' || tg.classList.contains('DSJ__click')) {
     lv = lv || 1;
-    if (node.classList.contains('MD_JRDSJ__click') || node.getAttribute("JRDSJ") !== null) {
+    if (node.classList.contains('DSJ__click') || node.getAttribute("DSJ") !== null) {
         return node;
     } else if (lv <= 3 && node.parentNode.nodeName !== 'BODY') {
         return getClickTarget(node.parentNode, lv++);

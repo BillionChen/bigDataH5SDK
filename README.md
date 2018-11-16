@@ -55,8 +55,8 @@ H5数据采集分为以下几个阶段：
     pageView, // 进入页面会自动采集一次pv，但单页应用需要跳转时手动调用此方法
     customEvent, // 用户自定义事件/数据上传，传入一维数据json
     clickEvent, // 点击事件或者其他html事件上报（点击事件已自动捕获，不需要另行捕获）传入事件e
-    // 默认button标签、a标签、有点击类名 MD_JRDSJ__click 的标签需要采集并发送数据
-    // 采集上报的按钮名称默认先取 JRDSJ_text 属性的内容，若无，则采集按钮的中文内容
+    // 默认button标签、a标签、有点击类名 DSJ__click 的标签需要采集并发送数据
+    // 采集上报的按钮名称默认先取 DSJ_text 属性的内容，若无，则采集按钮的中文内容
     setOption // 初始化时调用，传入系统/平台名称等，也可以在加载js的script上写，后面介绍
 }
 ```
@@ -75,8 +75,8 @@ npm run build-test # 测试环境
     <div>测试失败</div>
     <a>测试成功一</a>
     <button>测试成功二</button>
-    <div class="MD_JRDSJ__click">测试成功三</div>
-    <button JRDSJ_text="测试成功四文案lalala">测试成功四</button>
+    <div class="DSJ__click">测试成功三</div>
+    <button DSJ_text="测试成功四文案lalala">测试成功四</button>
 </body>
 <script id="bigdata-sdk" src="bigdata-sdk.min.js?platform=你的系统名&username_key=userCode&auto_pv=true"></script>
 ```

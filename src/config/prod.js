@@ -1,7 +1,7 @@
 export default {
     NODE_ENV: 'prod',// 环境名称
     BAIDU_MAP_AK: '',
-    STORAGE_PREFIX: 'mdf_',// 存储变量命名空间/前缀
+    STORAGE_PREFIX: 'dsj_',// 存储变量命名空间/前缀
     STORAGE_ADDRESS: 'address_info',// 地址存储
     STORAGE_USER_AGENT: 'user_agent_info',// ua存储
     STORAGE_USERINFO: 'user_info',// 用户列表存储
