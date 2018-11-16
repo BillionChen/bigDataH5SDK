@@ -1,7 +1,7 @@
 import config from './prod';
 export default Object.assign(config, {
     NODE_ENV: 'test',
-    BAIDU_MAP_AK: 'Cy17bLtfb612TPq2NdQQvvyH2ydSx3GK',
+    BAIDU_MAP_AK: '',
 
     CONSOLE_DEBUG: true,
     CONSOLE_LOG: true,
