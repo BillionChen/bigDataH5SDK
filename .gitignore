@@ -1,0 +1,3 @@
+src/config/index.js
+node_modules
+dist/*
